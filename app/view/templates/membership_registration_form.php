@@ -22,6 +22,17 @@ echo '<div class="ms-extra-fields">';
  */
 ms_registration_form_extra_fields();
 
+?>
+<!-- Adding telephone field here -->
+<div class="ms-form-element ms-form-element-telephone">
+        <span class="wpmui-wrapper wpmui-input-wrapper ">
+                <label for="telephone" class="wpmui-field-label  wpmui-label-telephone ">Telephone </label>
+                <input class="wpmui-field-input wpmui-text  wpmui-input-telephone" type="text" id="telephone" name="telephone" value="">
+        </span>
+</div>
+<!-- Adding telephone field here/End -->
+<?php
+
 echo '</div>';
 
 echo get_ms_registration_form_register_button();

@@ -102,6 +102,12 @@
                                         <td class="ms-label-field"><?php echo esc_html( get_ms_ac_profile_info( $field ) ); ?></td>
                                 </tr>
                         <?php endforeach; ?>
+                                <!-- Showing telephone field in account page -->
+                                <tr>
+                                        <th class="ms-label-phone">Telephone: </th>
+                                        <td class="ms-label-field"><?php echo esc_html( get_user_meta( get_current_user_id(), 'ms_phone', true ) ); ?></td>
+                                </tr>
+                                <!-- Showing telephone field in account page/End -->
                 </table>
                 <?php
                 do_action( 'ms_view_account_profile_before_card', get_ms_ac_member_obj(), get_ms_ac_account_obj() );
