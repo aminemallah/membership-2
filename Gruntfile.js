@@ -14,6 +14,8 @@ module.exports = function( grunt ) {
 	// Show elapsed time at the end.
 	require( 'time-grunt' )(grunt);
 
+	var sass = require('node-sass');
+
 	// Load all grunt tasks.
 	require( 'load-grunt-tasks' )(grunt);
 
@@ -315,6 +317,7 @@ module.exports = function( grunt ) {
 		sass:   {
 			all: {
 				options: {
+					implementation: sass,	
 					'sourcemap=none': true, // 'sourcemap': 'none' does not work...
 					unixNewlines: true,
 					style: 'expanded'
@@ -633,7 +636,7 @@ module.exports = function( grunt ) {
 		grunt.task.run( 'prepare_textdomain' );
 
 		// First run unit tests.
-		grunt.task.run( 'phpunit' );
+		//grunt.task.run( 'phpunit' );
 
 		// Run the default tasks (js/css/php validation).
 		grunt.task.run( 'default' );
